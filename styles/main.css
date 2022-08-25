@@ -1,0 +1,147 @@
+:root {
+  --accent-color: #1f4f7c;
+  --bg-color: #f1f1f1;
+  --black-text: #0d0d0d;
+  --white-text: #ffffff;
+  --large-text: 1.802rem;
+  --medium-text: 1.125rem;
+  --b-radius: 0.4rem;
+  --shadow-color: rgba(31, 79, 124, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--black-text);
+  line-height: 1.5;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+select {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--bg-color);
+}
+
+.main-image,
+.form__btn,
+.qr-container {
+  user-select: none;
+}
+
+.p-m {
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: var(--large-text);
+  font-weight: 600;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 23.75rem;
+  height: auto;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.form {
+  max-width: 31.25rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form__title {
+  margin-bottom: 0;
+  font-size: var(--medium-text);
+}
+
+.form__description {
+  margin-top: 0;
+  font-size: var(--medium-text);
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  outline: none;
+}
+
+.form__btn {
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+  font-size: var(--medium-text);
+  color: var(--white-text);
+  background-color: var(--accent-color);
+  box-shadow: 0 1px 3px var(--shadow-color), 0 3px 7px var(--shadow-color);
+  border: none;
+  border-radius: var(--b-radius);
+  cursor: pointer;
+}
+
+.form__btn--save {
+  text-decoration: none;
+  text-align: center;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 64rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem;
+}
+
+.qrcode {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form__input:focus {
+  outline: none;
+  border-top-right-radius: var(--b-radius);
+  border-top-left-radius: var(--b-radius);
+  background-color: aliceblue;
+}
+
+.form__btn:active {
+  transition: all 0.4s ease;
+  scale: 0.95;
+}
+
+@media screen and (min-width: 850px) {
+  .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 2rem;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador QR</title>
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="main-title">Generador de Códigos QR</h1>
+      <div class="main-container">
+        <img
+          src="images/generador_qr_online.svg"
+          alt="generador de códigos QR en línea"
+          class="main-image"
+        />
+        <form id="form" class="form">
+          <h2 class="form__title">¡Genera un código QR al instante!</h2>
+          <p class="form__description">
+            Ingresa una direción web, escoge el tamaño y no olvides descargarlo.
+          </p>
+          <input
+            type="url"
+            name="url"
+            id="url"
+            class="form__input p-m"
+            placeholder="Ejemplo https://www.google.com"
+            required
+          />
+          <select name="size" id="size" class="p-m">
+            <option value="200">200x200</option>
+            <option value="300" selected>300x300</option>
+            <option value="400">400x400</option>
+            <option value="500">500x500</option>
+            <option value="600">600x600</option>
+            <option value="700">700x700</option>
+          </select>
+          <button type="subtmit" class="form__btn p-m">
+            Generar Código QR
+          </button>
+        </form>
+      </div>
+    </main>
+    <div id="qr-container" class="qr-container">
+      <div id="qrcode" class="qrcode"></div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
